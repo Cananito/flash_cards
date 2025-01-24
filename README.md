@@ -1,17 +1,28 @@
 # flash_cards
 
-## Package Installation
+## Dev Set Up
 
-All package dependencies should be installed in the repo in the `vendor/`
-directory. For example:
-
-```
-python3 -m pip install Django --target vendor/
-```
-
-To verify installation:
+Install Django
 
 ```
-pip3 list --path vendor/
+$ python3 -m venv venv/
+$ source venv/bin/activate
+$ python3 -m pip install Django
+$ deactivate
 ```
 
+Install TypeScript:
+
+```
+npm install
+```
+
+Note: TypeScript was set up in this repo with:
+
+```
+npm install typescript --save-dev
+```
+
+## Building and Running
+
+TODO: Makefile
