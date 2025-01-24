@@ -1,3 +1,6 @@
-# Python usual venv dirs
+# Python
 .venv/
 venv/
+
+# Node
+node_modules/
