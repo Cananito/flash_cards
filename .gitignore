@@ -2,5 +2,5 @@
 .venv/
 venv/
 
-# Node
+# JavaScript
 node_modules/
