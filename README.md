@@ -2,25 +2,25 @@
 
 ## Dev Set Up
 
-Install Django
+Set up venv:
 
 ```
 $ python3 -m venv venv/
+```
+
+Install all Python dependencies:
+
+```
 $ source venv/bin/activate
+$ python3 -m pip install -r requirements.txt
 $ python3 -m pip install Django
 $ deactivate
 ```
 
-Install TypeScript:
+Install all JavaScript dependencies:
 
 ```
 npm install
-```
-
-Note: TypeScript was set up in this repo with:
-
-```
-npm install typescript --save-dev
 ```
 
 ## Building and Running
