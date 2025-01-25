@@ -5,3 +5,4 @@ __pycache__/
 
 # JavaScript
 node_modules/
+dist/
