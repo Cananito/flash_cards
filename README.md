@@ -25,4 +25,27 @@ npm install
 
 ## Building and Running
 
-TODO: Makefile
+Activate the Python virtual environment:
+
+```
+$ source venv/bin/activate
+```
+
+Build:
+
+```
+$ make build
+```
+
+Run the server:
+
+```
+$ make run
+```
+
+Once you've finished development tasks for this project, deactivate the Python
+virtual environment:
+
+```
+$ deactivate
+```
