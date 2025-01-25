@@ -6,3 +6,6 @@ __pycache__/
 # JavaScript
 node_modules/
 dist/
+
+# SQLite
+db.sqlite3
