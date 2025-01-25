@@ -2,4 +2,4 @@ build:
 	@echo "TODO"
 
 run:
-	@echo "TODO"
+	python3 manage.py runserver
