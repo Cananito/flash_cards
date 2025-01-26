@@ -1,8 +1,8 @@
-from django.http import HttpResponse
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
-def index(request):
+def index(request: HttpRequest):
     return render(request, "index.html")
 
-def sync(request):
+def sync(request: HttpRequest):
     return HttpResponse("Synco de mayo!");
