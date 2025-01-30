@@ -2,6 +2,12 @@
 
 ## Dev Set Up
 
+Requirements:
+
+1. Make.
+1. Python 3.
+1. Node.js (to install TypeScript).
+
 Set up venv:
 
 ```
@@ -13,7 +19,6 @@ Install all Python dependencies:
 ```
 $ source venv/bin/activate
 $ python3 -m pip install -r requirements.txt
-$ python3 -m pip install Django
 $ deactivate
 ```
 
