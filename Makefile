@@ -1,5 +1,5 @@
 build:
-	mypy --ignore-missing-imports .
+	mypy .
 	npx tsc
 
 run:
