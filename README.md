@@ -8,6 +8,7 @@ Requirements:
 1. Make.
 1. Nginx.
 1. FastCGI.
+1. SQLite.
 1. Node.js (to install TypeScript).
 
 TODO: More details on installation of first 3 reqs?
