@@ -7,7 +7,7 @@ int main() {
   FCGX_Request request;
   FCGX_InitRequest(&request, socket, 0);
   while(FCGX_Accept_r(&request) >= 0) {
-    FCGX_FPrintF(request.out, "Accept\nContent-type: text/html\r\n\r\n<h1>Title</h1>\n");
+    FCGX_FPrintF(request.out, "Accept\nContent-type: text/html\r\n\r\nSynco de Mayo!\n");
     FCGX_Finish_r(&request);
   }
   return 0;

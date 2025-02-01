@@ -13,4 +13,4 @@ nginx/logs/error.log
 nginx/logs/nginx.pid
 
 # SQLite
-db.sqlite3
+backend/db.sqlite3
