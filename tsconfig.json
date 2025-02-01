@@ -4,13 +4,12 @@
     "module": "es2020",
     "sourceMap": true, /* TODO: Disable in prod */
     "inlineSources": true, /* TODO: Disable in prod */
-    "outDir": "dist/",
     "removeComments": true,
     "preserveConstEnums": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true
   },
   "include": [
-    "webapp/**/*.ts"
+    "frontend/**/*.ts"
   ]
 }

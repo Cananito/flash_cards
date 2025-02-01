@@ -1,6 +1,9 @@
 build:
-	mypy .
+	$(CC) backend/main.c -lfcgi -o backend/main
 	npx tsc
 
 run:
-	python3 manage.py runserver
+	nginx -p $(CURDIR)/nginx
+
+stop:
+	nginx -p $(CURDIR)/nginx -s stop

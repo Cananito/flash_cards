@@ -1,11 +1,16 @@
-# Python
-.venv/
-venv/
-__pycache__/
+# C
+backend/main
 
 # JavaScript
 node_modules/
-dist/
+frontend/**/*.js
+frontend/**/*.js.map
+
+# Nginx
+nginx/*_temp/
+nginx/logs/access.log
+nginx/logs/error.log
+nginx/logs/nginx.pid
 
 # SQLite
 db.sqlite3
