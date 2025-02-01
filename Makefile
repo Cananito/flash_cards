@@ -10,6 +10,7 @@ build-be: backend/main.c
 	$(CC) backend/main.c -lfcgi -o backend/main
 
 start-nginx:
+	mkdir -p $(CURDIR)/nginx/logs
 	nginx -p $(CURDIR)/nginx
 
 stop-nginx:
