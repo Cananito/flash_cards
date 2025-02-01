@@ -53,3 +53,15 @@ To stop the Nginx server:
 ```
 $ make stop-nginx
 ```
+
+To delete generated JS files:
+
+```
+$ make clean-fe
+```
+
+To delete backend compilation artifacts:
+
+```
+$ make clean-be
+```

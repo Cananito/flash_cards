@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <fcgiapp.h>
 
 int main() {

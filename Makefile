@@ -1,7 +1,7 @@
 all:
 	echo "Choose a specific target"
 
-build-all: build-fe build-be
+build: build-fe build-be
 
 build-fe:
 	npx tsc
@@ -17,3 +17,12 @@ stop-nginx:
 
 run-be: backend/main
 	./backend/main
+
+clean: clean-be clean-fe
+
+clean-fe:
+	find frontend/ -name '*.js' -delete
+	find frontend/ -name '*.js.map' -delete
+
+clean-be:
+	rm -f backend/main
