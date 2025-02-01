@@ -11,15 +11,11 @@ Requirements:
 1. SQLite.
 1. Node.js (to install TypeScript).
 
-TODO: More details on installation of first 3 reqs?
-
 Install all JavaScript dependencies:
 
 ```
 npm install
 ```
-
-TODO: Nginx logs dir set-up (ignored by git).
 
 ## Building and Running
 
