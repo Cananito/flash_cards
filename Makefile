@@ -7,7 +7,7 @@ build-fe:
 	npx tsc
 
 build-be: backend/main.c
-	$(CC) backend/main.c -lfcgi -o backend/main
+	$(CC) -Wall -Wextra -Werror backend/main.c -lfcgi -o backend/main
 
 start-nginx:
 	mkdir -p $(CURDIR)/nginx/logs
