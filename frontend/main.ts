@@ -2,9 +2,9 @@ import { generateCardListView } from "./card_list_view.js"
 import { generateDeckListView } from "./deck_list_view.js"
 
 let backButton: HTMLElement;
-let syncButton: HTMLElement;
-let statusSpan: HTMLElement;
-let currentViewContainer: HTMLElement;
+let syncButton: HTMLButtonElement;
+let statusSpan: HTMLSpanElement;
+let currentViewContainer: HTMLDivElement;
 let currentView: HTMLElement;
 
 type URLRoute = {
