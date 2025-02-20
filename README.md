@@ -45,6 +45,8 @@ To run the backend server:
 $ make run-be
 ```
 
+To run the web app, open `http://localhost:7000/` in your web browser.
+
 To stop the Nginx server:
 
 ```
