@@ -1,17 +1,13 @@
 import { generateCardListView } from "./card_list_view.js"
 import { generateDeckListView } from "./deck_list_view.js"
 
-let backButton: HTMLElement;
-let syncButton: HTMLButtonElement;
-let statusSpan: HTMLSpanElement;
-let currentViewContainer: HTMLDivElement;
-let currentView: HTMLElement;
+let backButton;
+let syncButton;
+let statusSpan;
+let currentViewContainer;
+let currentView;
 
-type URLRoute = {
-  generator: Function;
-  isModal: boolean;
-};
-const urlRouteDict: { [key: string]: URLRoute } = {
+const urlRouteDict = {
   "/cards": {
     generator: generateCardListView,
     isModal: false,
@@ -22,8 +18,8 @@ function updateUIForCurrentPushState() {
   if (currentView) {
     currentViewContainer.removeChild(currentView);
   }
-  const currentPath: string = location.pathname;
-  const urlRoute: URLRoute = urlRouteDict[currentPath];
+  const currentPath = location.pathname;
+  const urlRoute = urlRouteDict[currentPath];
   if (urlRoute) {
     if (!urlRoute.isModal) {
       backButton.hidden = false;
@@ -41,11 +37,11 @@ function updateUIForCurrentPushState() {
 };
 
 function initializeUI() {
-  const body: HTMLElement = document.body;
+  const body = document.body;
 
   backButton = document.createElement("button");
   backButton.innerHTML = "Back";
-  backButton.addEventListener("click", function(e: Event) {
+  backButton.addEventListener("click", function(e) {
     history.pushState(null, "", "/");
     updateUIForCurrentPushState();
   });
@@ -54,16 +50,16 @@ function initializeUI() {
 
   syncButton = document.createElement("button");
   syncButton.innerHTML = "Sync";
-  syncButton.addEventListener("click", function(e: Event) {
-    fetch("api/sync/").then(function(response: Response) {
+  syncButton.addEventListener("click", function(e) {
+    fetch("api/sync/").then(function(response) {
       if (!response.ok) {
         throw new Error("Failed :(");
       }
       // TODO: Switch to response.json()
       return response.text();
-    }).then(function(text: String) {
+    }).then(function(text) {
       console.log("Sync response value: " + text.valueOf());
-      const now: Date = new Date();
+      const now = new Date();
       const nowString = now.toLocaleTimeString();
       statusSpan.innerHTML = "Last synced at " + nowString;
     }).catch(function(reason) {

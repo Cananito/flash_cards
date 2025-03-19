@@ -1,13 +1,15 @@
-all:
-	echo "Choose a specific target"
+CFLAGS=-Wall -Wextra -Werror
 
-build: build-fe build-be
+run: backend/main
+	./backend/main
 
-build-fe:
-	npx tsc
+build: backend/main
 
-build-be: backend/main.c
-	$(CC) -Wall -Wextra -Werror backend/main.c -lfcgi -o backend/main
+backend/main: backend/main.c
+	$(CC) $(CFLAGS) backend/main.c -lfcgi -o backend/main
+
+clean:
+	rm -f backend/main
 
 start-nginx:
 	mkdir -p $(CURDIR)/nginx/logs
@@ -16,14 +18,3 @@ start-nginx:
 stop-nginx:
 	nginx -p $(CURDIR)/nginx -s stop
 
-run-be: backend/main
-	./backend/main
-
-clean: clean-be clean-fe
-
-clean-fe:
-	find frontend/ -name '*.js' -delete
-	find frontend/ -name '*.js.map' -delete
-
-clean-be:
-	rm -f backend/main

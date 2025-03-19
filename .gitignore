@@ -1,11 +1,6 @@
 # C
 backend/main
 
-# JavaScript
-node_modules/
-frontend/**/*.js
-frontend/**/*.js.map
-
 # Nginx
 nginx/*_temp/
 nginx/logs/access.log
