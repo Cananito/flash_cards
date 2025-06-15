@@ -7,7 +7,7 @@ Requirements:
 1. A C compiler
 1. Make
 1. Nginx
-1. FastCGI
+1. FastCGI ([fcgi2](https://github.com/FastCGI-Archives/fcgi2))
 1. SQLite
 
 ## Building and Running
